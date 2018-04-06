@@ -94,7 +94,7 @@ Attributs :
 
 ### Masthead
 
-Composant permettant de confogurer l'ours en fin d'Explore.
+Composant permettant de configurer l'ours en fin d'Explore.
 
 
 ## Exportation du projet
