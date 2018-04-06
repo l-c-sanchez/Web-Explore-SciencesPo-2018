@@ -43,7 +43,7 @@ Dossiers contenants les composants
 
 ### Board
 
-C'est le composant principal qui orchestre les autres composants. Le board est découpé en slide qui peux éventuellement être une slide double. Voir les exeple dans le code.
+C'est le composant principal qui orchestre les autres composants. Le board est découpé en slide qui peux éventuellement être une slide double. Voir les exemples dans le code.
 
 ### Element
 

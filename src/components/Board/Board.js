@@ -54,28 +54,40 @@ export default class Board extends Component {
 
         return (
             <div id="board" className="Board" style={{marginTop:this.state.boardTop, left:0,  minWidth:this.state.slideWidth, height: this.state.boardHeight}}>
-                {/* CHAP 0 */}
+                
+                
+                {/* CHAP 0 */} 
+                {/* INTRODUCTION */}
                 <div className="Board__slide js-board-doubleslide">
                     <Skew position="right" name="CHAP00-SOUS-TITRE.png" bg="CHAP00-OUVERTURE.png"></Skew>
                 </div>
                 <div className="Board__slide"></div>
+                
                 <div className="Board__slide">
                     <Element name="CHAP00-TITRE1.png" index="p1" positionLeft="-40%"></Element>
-                    <Edito content={this.props.datas.text[0].zone_1} positionTop="37%"></Edito>
+                    {/* zone de texte */}
+                    <Edito content={this.props.datas.text[0].zone_1} positionTop="37%"></Edito>  
                     <Element name="AP-CHAP00-CONFETTIS.png" index="m2"></Element>
                 </div>
+                
                 <div className="Board__slide">
-                    <Element name="CHAP00-CARNAVAL1.png"></Element>
-                    <Element name="CHAP00-MASQUE.png" index="p1"></Element>
+                    <Edito content={this.props.datas.text[0].zone_2} positionTop="37%"></Edito>  
+                    {/* <Element name="CHAP00-CARNAVAL1.png"></Element>
+                    <Element name="CHAP00-MASQUE.png" index="p1"></Element> */}
                 </div>
                 <div className="Board__slide Board__slide--bottom">
                     <Element name="CHAP00-CITATION1.png" index="p1" positionLeft="20%"></Element>
                     <Element name="CHAP00-CARNAVAL2.png"></Element>
                 </div>
                 <div className="Board__slide Board__slide--middle js-board-doubleslide">
-                    <Edito content={this.props.datas.text[0].zone_2}></Edito>
+                    {/* <Edito content={this.props.datas.text[0].zone_2}></Edito> */}
                 </div>
+
+
+
+
                 {/* CHAP 1 */}
+                {/* Le jour où */}
                 <div className="Board__slide">
                     <Skew position="left" name="CHAP01-TITRE.png" bg="CHAP01-OUVERTURE.png"></Skew>
                 </div>
@@ -123,42 +135,17 @@ export default class Board extends Component {
                     <Element name="CHAP01-CITATION3-VISAGE.png"></Element>
                     <Edito content={this.props.datas.text[1].zone_6} positionTop="65%"></Edito>
                 </div>
-                <div className="Board__slide">
-                    <Element name="CHAP01-CHOC.png" index="p1"></Element>
-                    <Element name="AP-CHAP01-ROUE-2.gif" index="m1"></Element>
-                    <Edito content={this.props.datas.text[1].zone_7} positionTop="29%"></Edito>
-                </div>
-                <div className="Board__slide Board__slide--bottom">
-                    <Element name="CHAP01-CITATION4.png" index="p1"></Element>
-                    <Edito content={this.props.datas.text[1].zone_8} positionBottom="44%"></Edito>
-                </div>
-                <div className="Board__slide">
-                    <Element name="CHAP01-SUPPORTER.png"></Element>
-                </div>
-                <div className="Board__slide">
-                    <Element name="AP-CHAP01-MONTAGNE-OR-1.png" index="m1"></Element>
-                </div>
-                <div className="Board__slide">
-                    <Element name="CHAP01-CITATION5.png"></Element>
-                    <Element name="AP-CHAP01-MONTAGNE-OR-2.png" index="m2"></Element>
-                </div>
-                <div className="Board__slide">
-                    <Element name="CHAP01-CITATION6.png"></Element>
-                </div>
-                <div className="Board__slide">
-                    <Element name="CHAP01-NEERLANDAISE-TITRE.png" index="p1"></Element>
-                    <Element name="CHAP01-NEERLANDAISE.png"></Element>
-                    <Edito content={this.props.datas.text[1].zone_9} positionTop="45%"></Edito>
-                </div>
-                <div className="Board__slide">
-                    <Video id="k4gBurrn3vCiRFn1XCr" ratio="1.37"></Video>
-                    <Element name="CHAP01-ZIG.png" index="p1"></Element>
-                </div>
-                <div className="Board__slide js-board-doubleslide">
-                    <Element name="CHAP01-KOPPENBERG.png" index="p1"></Element>
-                    <Edito content={this.props.datas.text[1].zone_10} positionTop="28%"></Edito>
-                </div>
+ 
+
+
+
+
+
+
+
                 {/* CHAP 2 */}
+                {/* Flashback  */}
+
                 <div className="Board__slide">
                     <Skew position="left" name="CHAP02-TITRE.png" bg="CHAP02-OUVERTURE.png"></Skew>
                 </div>
@@ -199,7 +186,61 @@ export default class Board extends Component {
                 <div className="Board__slide Board__slide--middle js-board-doubleslide">
                     <Edito content={this.props.datas.text[2].zone_7}></Edito>
                 </div>
+                <div className="Board__slide Board__slide--middle js-board-doubleslide">
+                    <Edito content={this.props.datas.text[2].zone_8}></Edito>
+                </div>
+
+
+
+
+
+
                 {/* CHAP 3 */}
+                {/* La chasse aux tricheuses */}
+                <div className="Board__slide">
+                    <Skew position="left" name="CHAP03-TITRE.png" bg="CHAP03-OUVERTURE.png"></Skew>
+                </div>
+                <div className="Board__slide"></div>
+                <div className="Board__slide">
+                    <Element name="CHAP03-CYCLOCROSS.png" index="p1"></Element>
+                    <Element name="CHAP03-PORTRAIT-FEMKE.png"></Element>
+                    <Element name="AP-CHAP03-PORTRAIT-FEMKE.png" index="m2"></Element>
+                </div>
+                <div className="Board__slide Board__slide--middle">
+                    <Edito content={this.props.datas.text[3].zone_1}></Edito>
+                </div>
+                <div className="Board__slide">
+                    <StaticElement name="CHAP03-AVENDRE.png" bg="AP-CHAP03-AVENDRE.png" size="double"></StaticElement>
+                </div>
+                <div className="Board__slide Board__slide--middle">
+                    <Edito content={this.props.datas.text[3].zone_2}></Edito>
+                </div>
+                <div className="Board__slide Board__slide--middle">
+                    <Edito content={this.props.datas.text[3].zone_3}></Edito>
+                </div>
+                <div className="Board__slide">
+                    <Element name="CHAP03-VELO.png" index="p1"></Element>
+                    <Edito content={this.props.datas.text[3].zone_4} positionTop="48%"></Edito>
+                    <Element name="AP-CHAP03-CARTE.png" index="m1"></Element>
+                </div>
+                <div className="Board__slide Board__slide--middle">
+                    <Element name="AP-CHAP03-CHUTE.png" index="p1"></Element>
+                    <Edito content={this.props.datas.text[3].zone_5}></Edito>
+                </div>
+                <div className="Board__slide Board__slide--middle js-board-doubleslide">
+                    <Edito content={this.props.datas.text[3].zone_6}></Edito>
+                    <Element name="AP-CHAP03-PLUMES.png" index="m1"></Element>
+                </div>
+                <div className="Board__slide Board__slide--middle js-board-doubleslide">
+                    <Edito content={this.props.datas.text[3].zone_7}></Edito>
+                    <Element name="AP-CHAP03-PLUMES.png" index="m1"></Element>
+                </div>
+                <div className="Board__slide Board__slide--middle js-board-doubleslide">
+                <Edito content={this.props.datas.text[3].zone_8}></Edito>
+                <Element name="AP-CHAP03-PLUMES.png" index="m1"></Element>
+                 </div>
+
+                {/* Conclusion  */}
                 <div className="Board__slide">
                     <Skew position="left" name="CHAP03-TITRE.png" bg="CHAP03-OUVERTURE.png"></Skew>
                 </div>
