@@ -1,7 +1,7 @@
 @import "../../shared";
 
 .Text {
-    @include font(light, 16, 20);
+    @include font(regular, 16, 20);
     padding: 0 $border-content*1.5;
 
     @media (min-height: $bp-phone) {
