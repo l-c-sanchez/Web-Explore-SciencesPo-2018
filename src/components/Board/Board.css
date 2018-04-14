@@ -29,15 +29,6 @@ body.is-sharing .Board {
   height: inherit;
   padding: 0; }
 
-.white_blue {
-  background-image: linear-gradient(#f9f9f9, #afbbca); }
-
-.red {
-  background-image: linear-gradient(#c22f32, #f04545); }
-
-.blue {
-  background-image: linear-gradient(#64b2df, #64b2df); }
-
 .Board__slide--middle {
   vertical-align: middle; }
 
@@ -48,3 +39,12 @@ body.is-sharing .Board {
   content: '';
   display: block;
   clear: both; }
+
+.white_blue {
+  background-image: linear-gradient(#f9f9f9, #afbbca); }
+
+.red {
+  background-image: linear-gradient(#f04545, #c22f32); }
+
+.only_blue {
+  background-image: linear-gradient(#64b2df, #64b2df); }
