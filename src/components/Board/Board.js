@@ -64,20 +64,23 @@ export default class Board extends Component {
                     <Edito content={this.props.datas.text[0].zone_1} positionBottom="50%"></Edito>  
                 </div>
 
-                {/* PHOTO SKI / VICTOIRE */}
+                 <div className="Board__slide white_blue">
+                 <Element name="CHAP00-PHOTO1B.png" index="m1" positionLeft="35%"></Element> 
+                    <Element name="CHAP00-PHOTO1.png" index="p2" positionLeft="25%"></Element>
+                </div> 
 
                 <div className="Board__slide white_blue Board__slide--middle js-board-doubleslide">
                     <Edito content={this.props.datas.text[0].zone_2} positionBottom="30%"></Edito>    
                 </div>
 
                 <div className="Board__slide white_blue Board__slide--middle">
-                    <Element name="AP-CHAP00-CITATION1.png" positionLeft="15%"></Element>
-                    <Element name="CHAP00-CITATION1.png" index="p1" positionLeft="0%"></Element>    
+                    <Element name="AP-CHAP00-CITATION1.png" index="p1" positionLeft="15%"></Element>
+                    <Element name="CHAP00-CITATION1.png" index="p2" positionLeft="0%"></Element>    
                 </div>
 
-                <div className="Board__slide white_blue Board__slide--middle js-board-doubleslide">
-                    <Edito content={this.props.datas.text[0].zone_3} positionBottom="30%"></Edito> 
-                    <Element name="CHAP00-CITATION2.png" index="p1" positionLeft="15%"></Element>   
+                <div className="Board__slide white_blue Board__slide--top js-board-doubleslide">
+                    <Edito content={this.props.datas.text[0].zone_3} positionTop="10%"></Edito> 
+                    <Element name="CHAP00-CITATION2.png" index="m1" positionLeft="65%"></Element>   
                 </div>
 
          
@@ -99,6 +102,7 @@ export default class Board extends Component {
                 <div className="Board__slide Board__slide--bottom white_blue">
                      <Element name="CHAP01-CITATION1.png" index="p2" positionLeft="15%"></Element>   
                      {/* Photos sous citation */}
+                     <Element name="AP-CHAP01-CITATIONANAIS.png" index="p2" positionLeft="15%"></Element>   
                 </div>
                 
                 <div className="Board__slide Board__slide--middle white_blue">
@@ -113,15 +117,15 @@ export default class Board extends Component {
                 <div className="Board__slide white_blue">
                     <Video id="k7hbaqsPXNZv6HqxEZY" ratio="1.5"></Video>
                 </div>
-                <div className="Board__slide Board__slide--middle white_blue">
-                    <Edito content={this.props.datas.text[1].zone_5}></Edito>
-                    <Element name="CHAP00-CITATION2.png" index="p1" positionLeft="15%"></Element> 
+                <div className="Board__slide Board__slide--top white_blue">
+                    <Edito content={this.props.datas.text[1].zone_5} positionTop="7%"></Edito>
+                    <Element name="CHAP01-CITATION2.png" index="m1" positionLeft="40%"></Element> 
                 </div> 
         
-                <div className="Board__slide Board__slide--bottom white_blue">
+                <div className="Board__slide Board__slide--middle white_blue">
                     <Edito content={this.props.datas.text[1].zone_6} positionTop="27%"></Edito>
                 </div>
-                <div className="Board__slide white_blue"> 
+                <div className="Board__slide Board__slide--middle white_blue"> 
                     <Edito content={this.props.datas.text[1].zone_7} positionBottom="50%"></Edito>
                 </div>
                 {/* PHOTO ERIK MEC */}
@@ -230,7 +234,12 @@ export default class Board extends Component {
                     <Edito content={this.props.datas.text[3].zone_7}></Edito>
                 </div>
 
+
                 {/* VIDEO ERIK SANS CETTEMEDIALLE... */}
+                 <div className="Board__slide">
+                    <Video id="k6nQH9clutLjhlqxEZX" ratio="1.37"></Video>
+                </div>
+           
                
 
                 {/* Conclusion  */}
