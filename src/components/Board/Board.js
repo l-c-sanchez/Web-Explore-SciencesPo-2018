@@ -316,9 +316,9 @@ export default class Board extends Component {
                 <div className="Board__slide Board__slide--middle only_blue">
                     <Edito content={this.props.datas.text[4].zone_5}></Edito>
                 </div>
-                <div className="Board__slide Board__slide--middle only_blue">
+                {/* <div className="Board__slide Board__slide--middle only_blue">
                     <Edito content={this.props.datas.text[4].zone_6}></Edito>
-                </div>
+                </div> */}
     
     
                 <div className="Board__slide only_blue">
