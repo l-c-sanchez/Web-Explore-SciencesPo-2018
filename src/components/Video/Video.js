@@ -47,15 +47,27 @@ export default class Edito extends Component {
     }
 
     componentDidMount() {
+        let newHeight = this.state.height;
+        let deviceRatio = document.documentElement.clientWidth
+            / document.documentElement.clientHeight;
+
         if (this.props.positionTop) {
             this.setState({top: this.props.positionTop});
         }
         if (this.props.positionBottom) {
             this.setState({bottom: this.props.positionBottom});
         }
-        if (this.props.ratio) {
-            this.setState({height: this.state.width / this.props.ratio});
+        if (this.props.maxHeight) {
+            newHeight = Math.min(this.props.maxHeight, this.state.height); 
         }
+        if (this.props.ratio) {
+            if (deviceRatio >= this.props.ratio) {
+                this.setState({width: newHeight * this.props.ratio});
+            } else {
+                newHeight = this.state.width / this.props.ratio;
+            }
+        }
+        this.setState({height: newHeight});
 
         playersRef.push(this);
     }
