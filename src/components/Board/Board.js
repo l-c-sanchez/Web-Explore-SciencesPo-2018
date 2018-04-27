@@ -61,7 +61,7 @@ export default class Board extends Component {
                 {/* CHAP 0  */}
                 {/* INTRODUCTION */}
  
-                 {/* <div className="Board__slide white_blue Board__slide--top">
+                 <div className="Board__slide white_blue Board__slide--top">
                     <Element name="FOND2.png" index="p2" positionLeft="-10%"></Element> 
                 </div>
 
@@ -78,29 +78,30 @@ export default class Board extends Component {
                 </div> 
 
                 <div className="Board__slide white_blue Board__slide--top">
-                    <Edito content={this.props.datas.text[0].zone_2} positionTop="12%"></Edito>
+                    <Edito content={this.props.datas.text[0].zone_2} positionTop="7%"></Edito>
                     <Element name="FOND12.png" positionLeft="40%"></Element> 
                    
                             
                 </div>
 
                 <div className="Board__slide white_blue Board__slide--middle">
-                <Element name="FOND4.png" positionLeft="-110%"></Element> 
-                    <Element name="AP-CHAP00-CITATION1.png" index="p1" positionLeft="7%"></Element>
-                    <Element name="CHAP00-CITATION1.png" index="p1" positionLeft="-2%"></Element>
+                <Element name="FOND4.png" index="m1" positionLeft="-100%"></Element>
+                    <Element name="AP-CHAP00-CITATION1.png" index="p2" positionLeft="7%"></Element>
+                    <Element name="CHAP00-CITATION1.png" index="p2" positionLeft="-2%"></Element>
                             
                 </div> 
 
                 <div className="Board__slide white_blue Board__slide--top">
               
-                    <Edito content={this.props.datas.text[0].zone_3} positionTop="12%"></Edito>
+                    <Edito content={this.props.datas.text[0].zone_3} positionTop="25%"></Edito>
                    
                 </div>
                 <div className="Board__slide white_blue Board__slide--top js-board-doubleslide"> 
-                <Element name="FOND4.png" positionLeft="-170%"></Element>
+              
                      <Element name="FOND22.png" positionLeft="35%"></Element>
-                    <Element name="CHAP00-CITATION2v2.png" index="p2" positionLeft="0%"></Element> 
-                </div>   */}
+                    <Element name="CHAP00-CITATION2v3.png"  index="p2" positionLeft="0%"></Element> 
+                    <Element name="FOND1.png" positionLeft="-5%"></Element>
+                </div>  
 
 
           
@@ -108,27 +109,27 @@ export default class Board extends Component {
                 {/* CHAP 1 */}
                 {/* Le jour où */}
 
-                {/* <div className="Board__slide white_blue">
+                <div className="Board__slide white_blue">
                     <Skew position="left" name="CHAP01-TITRE.png" bg="CHAP01-OUVERTURE.png"></Skew>
                 </div>
                 <div className="Board__slide white_blue">
-                <Element name="FOND17-TELEPHONE.png" positionLeft="155%"></Element>
+              
                 </div>
 
                 <div className="Board__slide Board__slide--top white_blue">
-                    <Edito content={this.props.datas.text[1].zone_1} positionTop="9%"></Edito>
-                   
-                   
-                    
-                    
+                    <Edito content={this.props.datas.text[1].zone_1} positionTop="9%"></Edito> 
+                    <Element name="FOND17-TELEPHONE.png" positionLeft="60%"></Element>   
+                    <Element name="FOND13.bottomtwo.png" positionLeft="150%"></Element>
                 </div>
-                <div className="Board__slide  Board__slide--middle white_blue">
-                    <Edito content={this.props.datas.text[1].zone_2}  positionTop="7%"></Edito>
-                    <Element name="FOND11.png" positionLeft="45%"></Element>
+                <div className="Board__slide  Board__slide--top white_blue">
+                    <Edito content={this.props.datas.text[1].zone_2}  positionTop="19%"></Edito>
+                  
+                 
                 </div>
 
-                      <div className="Board__slide Board__slide--middle white_blue">
-                    <Edito content={this.props.datas.text[1].zone_2bis}  positionTop="7%"></Edito>
+                      <div className="Board__slide Board__slide--bottom white_blue">
+                      <Element name="FOND13bottomcuatro.png" positionLeft="-25%"></Element>
+                    <Edito content={this.props.datas.text[1].zone_2bis}  positionBottom="26%"></Edito>
                 </div>
 
                 <div className="Board__slide Board__slide--bottom white_blue">
@@ -185,13 +186,13 @@ export default class Board extends Component {
                     <Element name="CHAP01-CITATION3.png" index="p1" positionLeft="-5%"></Element>
                     <Element name="FOND11.png" positionLeft="-20%"></Element>
                 </div> 
-                  */}
+                 
     
 
                 {/* CHAP 2 */}
                 {/* Flashback  */}
 
-                 {/* <div className="Board__slide white_blue">
+                 <div className="Board__slide white_blue">
                     <Skew position="left" name="CHAP02-TITRE.png" bg="CHAP02-OUVERTURE.png"></Skew>
                 </div>
 
@@ -200,7 +201,7 @@ export default class Board extends Component {
 
                 <div className="Board__slide Board__slide--bottom red white">
                     <Element name="FOND6bis.png" index="m1" ></Element>
-                    <Edito color="white" content={this.props.datas.text[2].zone_1} positionBottom="7%"></Edito>
+                    <Edito content={this.props.datas.text[2].zone_1} positionBottom="7%"></Edito>
                 </div>
 
                 <div className="Board__slide Board__slide--middle red white">
@@ -229,7 +230,7 @@ export default class Board extends Component {
                 </div>
 
                 <div className="Board__slide Board__slide--bottom red white">
-                    <Edito content={this.props.datas.text[2].zone_4} positionBottom="10%"></Edik72yQ69cDu3fzaqCpC0to>
+                    <Edito content={this.props.datas.text[2].zone_4} positionBottom="10%"></Edito>
                 </div>
 
                 <div className="Board__slide red videoachangerjaiattendiqiemeseinspoussentred">
@@ -250,12 +251,12 @@ export default class Board extends Component {
                  <div className="Board__slide Board__slide--bottom red white">
                  <Element name="FOND12.png" positionLeft="-36%" index="m1"></Element>
              
-                     <Edito content={this.props.datas.text[2].zone_7} positionBottom="26%"></Edito>
+                     <Edito content={this.props.datas.text[2].zone_7} positionBottom="27%"></Edito>
                  </div>
                  <div className="Board__slide Board__slide--bottom red white">
                  <Element name="FOND13bottomter.png" positionLeft="-80%" index="p1"></Element>
                  <Element name="FOND13bottomcuatro.png" positionLeft="-25%" index="m1"></Element>
-                     <Edito content={this.props.datas.text[2].zone_8}  positionBottom="26%"></Edito>
+                     <Edito content={this.props.datas.text[2].zone_8}  positionBottom="33%"></Edito>
                 </div>  
 
                 <div className="Board__slide Board__slide--bottom red white">
@@ -264,12 +265,11 @@ export default class Board extends Component {
 
 
                 <div className="Board__slide Board__slide--top js-board-doubleslide red white">
-                <Element name="FOND13bottomtwo.png" positionLeft="-30%" index="p1"></Element>
                 <Element name="FOND12.png" positionLeft="70%" index="p2"></Element>
-                <Element name="FOND18-ANNEAUXJO.png" positionLeft="20%" index="m1"></Element>
+                <Element name="FOND18-ANNEAUXJO.png" positionLeft="-15%" index="m1"></Element>
               
                     <Edito content={this.props.datas.text[2].zone_8} positionTop="19%"></Edito>
-                </div>  */}
+                </div> 
 
 
 
@@ -283,13 +283,13 @@ export default class Board extends Component {
                 </div>
                 <div className="Board__slide white_blue"></div>
   
-                <div className="Board__slide Board__slide--bottom white_blue">
-                <Element name="FOND14.png" positionLeft="15%" index="m2"></Element>
-                    <Edito content={this.props.datas.text[3].zone_1} positionBottom="15%"></Edito>
+                <div className="Board__slide Board__slide--top white_blue">
+                <Element name="FOND14inv.png" positionLeft="15%" index="m2"></Element>
+                    <Edito content={this.props.datas.text[3].zone_1} positionTop="15%"></Edito>
                 </div>
            
-                <div className="Board__slide Board__slide--bottom white_blue">
-                    <Edito content={this.props.datas.text[3].zone_2} positionBottom="15%"></Edito>
+                <div className="Board__slide Board__slide--top white_blue">
+                    <Edito content={this.props.datas.text[3].zone_2} positionTop="19%"></Edito>
                 </div> 
     
                 <div className="Board__slide white_blue">
@@ -305,15 +305,15 @@ export default class Board extends Component {
                 </div>
 
                 <div className="Board__slide Board__slide--top white_blue">
-                    <Edito content={this.props.datas.text[3].zone_4} positionTop="15%"></Edito>
+                    <Edito content={this.props.datas.text[3].zone_4} positionTop="12%"></Edito>
                 </div>
                 <div className="Board__slide Board__slide--top white_blue">
-                    <Edito content={this.props.datas.text[3].zone_5} positionTop="15%"></Edito>
+                    <Edito content={this.props.datas.text[3].zone_5} positionTop="30%"></Edito>
                 </div>
       
                 <div className="Board__slide Board__slide--bottom white_blue">
                <Element name="FOND7bis.png" positionLeft="-30%" index="m2"></Element>
-                    <Edito content={this.props.datas.text[3].zone_7} positionBottom="15%"></Edito>
+                    <Edito content={this.props.datas.text[3].zone_7} positionBottom="17%"></Edito>
                 </div>
 
                  <div className="Board__slide white_blue">
@@ -381,14 +381,3 @@ export default class Board extends Component {
     }
 }
 
-
-  {/* <div className="Board__slide">
-                    <Video id="k5NypIHM8nAGG3qxEZX" ratio="1.37"></Video>
-                
-                </div> */}
-                
-                   {/* <div className="Board__slide">
-                    <Video id="k3QBUX1kDBCstvqxEZZ" ratio="1.37"></Video>
-                
-                </div> */}
-           
