@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Text from '../Text/Text';
 import './Edito.css';
-import './color.css';
+
 
 export default class Edito extends Component {
 

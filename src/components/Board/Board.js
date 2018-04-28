@@ -7,7 +7,7 @@ import Skew from '../Skew/Skew';
 import Video from '../Video/Video';
 import Masthead from '../Masthead/Masthead';
 import './Board.css';
-import './test.css';
+import './color.css';
 
 
 function getSizes() {
@@ -237,7 +237,7 @@ export default class Board extends Component {
                     <Edito content={this.props.datas.text[2].zone_4} positionBottom="15%"></Edito>
                 </div>
 
-                <div className="Board__slide red videoachangerjaiattendiqiemeseinspoussentred">
+                <div className="Board__slide red">
               
                 <Video id="k72yQ69cDu3fzaqCpC0" maxHeight="800" ratio="0.561"></Video>
               
