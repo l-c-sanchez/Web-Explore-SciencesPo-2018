@@ -7,6 +7,8 @@ require('../../js/external/dailymotion.js')();
 var playersRef = [];
 var playersObj = {};
 
+
+
 /* eslint-disable */
 window.dmAsyncInit = function() {
     if (!playersRef.length) {
@@ -32,7 +34,33 @@ window.dmAsyncInit = function() {
         }
     }
 };
+
+window.addEventListener('resize', function() {
+    for(var i = 0; i < playersRef.length; i++) {
+        var clientHeight = Math.min(document.documentElement.clientHeight, config.ratio.height);
+        var newHeight = clientHeight;
+        var deviceRatio = document.documentElement.clientWidth
+            / document.documentElement.clientHeight;
+
+        if (playersRef[i].props.maxHeight) {
+            newHeight = Math.min(playersRef[i].props.maxHeight, clientHeight);
+        }
+        if (playersRef[i].props.ratio) {
+            if (deviceRatio >= playersRef[i].props.ratio) {
+                playersRef[i].setState({width: newHeight * playersRef[i].props.ratio});
+            } else {
+                newHeight = playersRef[i].state.width / playersRef[i].props.ratio;
+            }
+        }
+        playersRef[i].setState({height: newHeight});
+        playersObj[playersRef[i].props.id].width = newHeight * playersRef[i].props.ratio;
+        playersObj[playersRef[i].props.id].height = newHeight;
+    }
+    console.log(playersRef);
+});
+
 /* eslint-enable */
+
 
 export default class Edito extends Component {
 
