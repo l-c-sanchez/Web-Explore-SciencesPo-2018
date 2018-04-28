@@ -1,3 +1,7 @@
+Concours de L'Equipe Explore.
+En 1966, Erika Schinegger, sportive encore inconnue, devient championne du monde de descente en ski alpin. Elle semble promise à une grande carrière, et l'Autriche place en elle de grands espoirs pour les Jeux Olympiques de Grenoble en 1968. Pourtant, elle n’y participera pas : à la suite de tests de féminité, comme en subissent de nombreuses athlètes à cette époque-là, elle apprend avant les JO qu’elle est née avec un corps d’homme. 
+L'équipe EDJ Sciences Po
+
 # Modèle Explore Horizontal
 
 ## Installation
