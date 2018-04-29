@@ -21,15 +21,20 @@ export default class Element extends Component {
 
 		if (this.props.changeMargin === true) {
 			var _this = this;
-			window.addEventListener('load', function() {
+			var callback = function() {
 				var element = document.getElementById(_this.props.name);
-				console.log (element);
 				var slide = document.querySelector('.Board__slide');
-				console.log(slide);
 
-				element.style.marginLeft = ((slide.style.width / slide.style.height
-					- element.style.width / element.style.height) * 100) + "%";
+				element.style.marginLeft = ((slide.offsetWidth / slide.offsetHeight
+					- element.offsetWidth / element.offsetHeight) * 100) + "%";
+			};
+			var observer = new MutationObserver(callback);
+			observer.observe(document, {childList: true,
+				attributes: true,
+				characterData: true,
+				subtree: true,
 			});
+
 			window.addEventListener('resize', function() {
 				var element = document.getElementById(_this.props.name);
 				var slide = document.querySelector('.Board__slide');
