@@ -20,7 +20,7 @@ function getSizes() {
     if (width / height < config.ratio.width / config.ratio.height) {
         boardHeight = config.ratio.height * width / config.ratio.width;
         boardTop = (document.documentElement.clientHeight - boardHeight) / 2;
-    }
+	}
 
     return {
         slideWidth: slideWidth,
@@ -108,7 +108,7 @@ export default class Board extends Component {
                     <Element name="FOND13.bottomtwo.png" positionLeft="5%" index="p1"></Element>
                 </div>
                 <div className="Board__slide Board__slide--bottom white_blue">     
-                    <Element name="FOND21-LOUPE1.png" positionLeft="-35%" ></Element>
+                    <Element name="FOND21-LOUPE1.png" positionLeft="-18%" changeMargin={true}></Element>
                 </div>
                 <div className="Board__slide Board__slide--bottom white_blue">
                      <Element name="AP-CHAP01-CITATIONANAIS.png"></Element> 
@@ -199,11 +199,11 @@ export default class Board extends Component {
                     <Element name="FOND13bottom.png" positionLeft="55%" index="m1"></Element>
                 </div>
                 <div className="Board__slide Board__slide--top red white">
-                     <Edito content={this.props.datas.text[2].zone_6} positionTop="20%"></Edito>
+                    <Edito content={this.props.datas.text[2].zone_6} positionTop="20%"></Edito>
                  </div>
                  <div className="Board__slide Board__slide--bottom red white">
                     <Element name="FOND12.png" positionLeft="0%" index="m1"></Element>
-                     <Edito content={this.props.datas.text[2].zone_7} positionBottom="25%"></Edito>
+                    <Edito content={this.props.datas.text[2].zone_7} positionBottom="25%"></Edito>
                  </div>
                 <div className="Board__slide Board__slide--bottom red white">
                     <Element name="CHAP02-INFOGRAPHIE2-EXCLUSION.png"></Element>
