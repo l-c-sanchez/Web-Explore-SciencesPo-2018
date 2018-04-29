@@ -23,7 +23,7 @@ export default class Element extends Component {
             var _this = this;
             var ct = 30;
             
-			var callback = function() {
+			var observer = new MutationObserver(function() {
                 if (ct <= 0) { 
                     observer.disconnect();
                 }  
@@ -32,10 +32,9 @@ export default class Element extends Component {
 
 				element.style.marginLeft = ((slide.offsetWidth / slide.offsetHeight
                     - element.offsetWidth / element.offsetHeight) * 100) + "%";
-                ct--;
-               
-			};
-			var observer = new MutationObserver(callback);
+				ct--;
+			});
+
 			observer.observe(document, {childList: true,
 				attributes: true,
 				characterData: true,
