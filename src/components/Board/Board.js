@@ -89,7 +89,7 @@ export default class Board extends Component {
                 </div>   
 
                 {/* CHAP 1 */}
-                <div className="Board__slide white_blue">
+                {/* <div className="Board__slide white_blue">
                     <Skew position="left" name="CHAP01-TITRE.png" bg="CHAP01-OUVERTURE.png" change={true} ></Skew>
                 </div>
                 <div className="Board__slide white_blue">
@@ -129,7 +129,7 @@ export default class Board extends Component {
                 </div>  
                 <div className="Board__slide Board__slide--top white_blue">
                     <Edito content={this.props.datas.text[1].zone_5} positionTop="13%"></Edito>
-                    <Element name="CHAP01-CITATION2.png" index="m1" positionLeft="0%" changeMargin={true} ></Element> 
+                    <Element name="CHAP01-CITATION2.png" index="m1" positionLeft="0%"></Element> 
                     <Element name="FOND1.png" index="m1" positionLeft="20%" ></Element> 
                 </div> 
                 <div className="Board__slide Board__slide--top white_blue">
@@ -150,11 +150,11 @@ export default class Board extends Component {
                     <Element name="AP-CHAP01-CITATION3.png" index="p1" positionLeft="-20%"></Element>
                     <Element name="CHAP01-CITATION3.png" index="p1" positionLeft="-5%"></Element>
                     <Element name="FOND11bis.png" positionLeft="-20%"></Element>
-                </div>  
+                </div>   */}
                  
                 {/* CHAP 2 */}
 
-                  <div className="Board__slide white_blue">
+                  {/* <div className="Board__slide white_blue">
                     <Skew position="left" name="CHAP02-TITRE.png" bg="CHAP02-OUVERTURE.png"></Skew>
                 </div>
                 <div className="Board__slide Board__slide--middle red white">
@@ -210,11 +210,11 @@ export default class Board extends Component {
                 <div className="Board__slide Board__slide--top red white">
                     <Edito content={this.props.datas.text[2].zone_8}  positionTop="27%"></Edito>
                     <Element name="FOND18-ANNEAUXJO.png" positionLeft="-5%" index="m1"></Element>
-                </div>  
+                </div>   */}
                 
                 {/* CHAP 3 */}
 
-                 <div className="Board__slide red">
+                 {/* <div className="Board__slide red">
                     <Skew position="left" name="CHAP03-TITRE.png" bg="CHAP03-OUVERTURE.png"></Skew>
                 </div>
                 <div className="Board__slide white_blue"></div>
@@ -250,7 +250,7 @@ export default class Board extends Component {
                 </div>
                  <div className="Board__slide white_blue">
                     <Video id="k6nQH9clutLjhlqxEZX" maxHeight="800" ratio="0.561"></Video>
-                </div> 
+                </div>  */}
          
                 {/* CHAP04 - Conclusion */}
 
@@ -286,7 +286,7 @@ export default class Board extends Component {
                     <Edito content={this.props.datas.text[4].zone_4} positionBottom="15%"></Edito>
                 </div>
                 <div className="Board__slide Board__slide--bottom only_blue white">
-                    <Element name="FOND20-FIN.png" index="p1" positionLeft="-66%" changeMargin={true} ></Element>
+                    <Element name="FOND20-FIN.png" index="p1" positionLeft="-76%" ></Element>
                     <Element name="CHAP04-PHOTO2.png" index="p1" positionLeft="0%"></Element>
                 </div> 
                 <div className="Board__slide Board__slide--top only_blue white">
