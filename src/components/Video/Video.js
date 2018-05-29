@@ -56,7 +56,7 @@ window.addEventListener('resize', function() {
         playersObj[playersRef[i].props.id].width = newHeight * playersRef[i].props.ratio;
         playersObj[playersRef[i].props.id].height = newHeight;
     }
-    console.log(playersRef);
+    // console.log(playersRef);
 });
 
 /* eslint-enable */

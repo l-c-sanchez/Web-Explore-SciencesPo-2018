@@ -27,7 +27,7 @@ export default class Element extends Component {
         }
 
         return (
-            <div className={"Skew Skew--" + this.state.position} style={{backgroundImage:'url(' + require("./img/" + this.props.bg) + ')'}}>
+            <div className={"Skew Skew--" + this.state.position} id={this.props.bg} style={{backgroundImage:'url(' + require("./img/" + this.props.bg) + ')'}}>
                 {title}
             </div>
         );

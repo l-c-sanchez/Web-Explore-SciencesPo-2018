@@ -76,7 +76,6 @@ export default class Board extends Component {
                 </div>
                 <div className="Board__slide white_blue Board__slide--middle">
                     <Element name="FOND4.png" index="m2" positionLeft="-80%"></Element>
-                    <Element name="AP-CHAP00-CITATION1.png" index="p1" positionLeft="8%" changeMargin={true}></Element>
                     <Element name="CHAP00-CITATION1.png" index="p1" positionLeft="-2%" changeMargin={true}></Element>        
                 </div> 
                 <div className="Board__slide white_blue Board__slide--top">
@@ -90,16 +89,13 @@ export default class Board extends Component {
 
                 {/* CHAP 1 */}
                 <div className="Board__slide white_blue">
-                    <Skew position="left" name="CHAP01-TITRE.png" bg="CHAP01-OUVERTURE.png" change={true} ></Skew>
+                    <Skew position="left" name="CHAP01-TITRE.png" bg="CHAP01-OUVERTURE.png" changeMargin={true}></Skew>
                 </div>
                 <div className="Board__slide white_blue">
-              
                 </div>
-
                 <div className="Board__slide Board__slide--bottom white_blue">
                     <Edito content={this.props.datas.text[1].zone_1} positionBottom="8%"></Edito> 
                     <Element name="FOND17-TELEPHONE.png" positionLeft="-10%" index="p1"></Element>   
-                    
                 </div>
                 <div className="Board__slide  Board__slide--top white_blue">
                     <Edito content={this.props.datas.text[1].zone_2}  positionTop="37%"></Edito>
@@ -147,7 +143,6 @@ export default class Board extends Component {
                     <Edito content={this.props.datas.text[1].zone_8}  positionTop="20%"></Edito>
                 </div>
                 <div className="Board__slide Board__slide--bottom white_blue"> 
-                    <Element name="AP-CHAP01-CITATION3.png" index="p1" positionLeft="-20%"></Element>
                     <Element name="CHAP01-CITATION3.png" index="p1" positionLeft="-5%"></Element>
                     <Element name="FOND11bis.png" positionLeft="-20%"></Element>
                 </div>  
@@ -175,7 +170,6 @@ export default class Board extends Component {
                     <Element name="FOND14inv.png" positionLeft="-25%"></Element>
                 </div>
                 <div className="Board__slide Board__slide--bottom red white">
-                    <Element name="AP-CHAP02-CITATION1.png" index="p1" positionLeft="11%"></Element>
                     <Element name="CHAP02-CITATION1.png" index="p1" positionLeft="0%"></Element>
                 </div>
                 <div className="Board__slide Board__slide--bottom red white">
@@ -267,7 +261,6 @@ export default class Board extends Component {
                     <Element name="CHAP04-PHOTO1A.png" index="p2" positionLeft="-1%"></Element>         
                 </div>
                 <div className="Board__slide Board__slide--bottom only_blue">
-                    <Element name="AP-CHAP04-CITATION1.png"  positionLeft="-3%"></Element>
                     <Element name="CHAP04-CITATION1.png" positionLeft="0%"></Element>  
                 </div>     
                 <div className="Board__slide Board__slide--top white only_blue">
