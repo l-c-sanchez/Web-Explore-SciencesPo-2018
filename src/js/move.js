@@ -1,7 +1,16 @@
 import jQuery from 'jquery';
 
-function getSlideWidth() {
-    return parseInt(document.getElementById('board').style.minWidth, 10);
+function getSlideWidth(currentOffset, prev) {
+	var width = parseInt(document.getElementById('board').style.minWidth, 10);
+	var smallSlides = document.querySelectorAll('.board-small-slide');
+	for (let i = 0; i < smallSlides.length; i++) {
+		if ((!prev && Math.abs(currentOffset) === smallSlides[i].offsetLeft)
+			|| (prev && (Math.abs(currentOffset) === smallSlides[i].offsetLeft + smallSlides[i].offsetWidth))) {
+			width = smallSlides[i].offsetWidth;
+			console.log(width);
+		}
+	}
+    return width;
 }
 
 function setBoardPosition(element, offset) {
@@ -18,10 +27,10 @@ function setElementsPosition(elements, offset, ratio) {
 
 function getSlideWidthFactor(currentOffset) {
     var doubleslides = document.querySelectorAll('.js-board-doubleslide');
-    var factor = 1;
+    var factor = 0;
     for (let i = 0; i < doubleslides.length; i++) {
         if (Math.abs(currentOffset) === doubleslides[i].offsetLeft) {
-            factor = 2;
+			factor = parseInt(document.getElementById('board').style.minWidth, 10);
         }
     }
 
@@ -64,13 +73,16 @@ var move = {
     },
 
     next: function() {
-        var currentOffset = parseInt(document.getElementById('board').style.left, 10);
-        move.to(currentOffset - getSlideWidth() * getSlideWidthFactor(currentOffset));
+		var currentOffset = parseInt(document.getElementById('board').style.left, 10);
+		// console.log(getSlideWidth(currentOffset));
+		move.to(currentOffset - getSlideWidth(currentOffset) - getSlideWidthFactor(currentOffset));
     },
 
     prev: function() {
         var currentOffset = parseInt(document.getElementById('board').style.left, 10);
-        move.to(currentOffset + getSlideWidth() * getSlideWidthFactor(currentOffset + getSlideWidth() * 2));
+		// move.to(currentOffset + getSlideWidth(currentOffset, true) * getSlideWidthFactor(currentOffset + getSlideWidth(currentOffset, true) * 2));
+        move.to(currentOffset + getSlideWidth(currentOffset, true));
+		
     }
 };
 

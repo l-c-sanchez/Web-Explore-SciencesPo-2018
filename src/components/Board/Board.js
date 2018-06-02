@@ -12,11 +12,15 @@ import './color.css';
 
 function getSizes() {
     var width = Math.min(document.documentElement.clientWidth, config.ratio.width),
-        height = Math.min(document.documentElement.clientHeight, config.ratio.height),
+		height = Math.min(document.documentElement.clientHeight, config.ratio.height),
+		mobile = false,
         slideWidth = width,
         boardHeight = height,
         boardTop = 0;
 
+	if (width < config.ratio.width) {
+		mobile = true;
+	}
     if (width / height < config.ratio.width / config.ratio.height) {
         boardHeight = config.ratio.height * width / config.ratio.width;
         boardTop = (document.documentElement.clientHeight - boardHeight) / 2;
@@ -25,7 +29,8 @@ function getSizes() {
     return {
         slideWidth: slideWidth,
         boardHeight: boardHeight,
-        boardTop: boardTop
+		boardTop: boardTop,
+		mobile : mobile
     }
 }
 
@@ -37,7 +42,8 @@ export default class Board extends Component {
         this.state = {
             slideWidth:getSizes().slideWidth,
             boardHeight:getSizes().boardHeight,
-            boardTop:getSizes().boardTop
+			boardTop:getSizes().boardTop,
+			mobile:getSizes().mobile
         };
     }
 
@@ -47,15 +53,16 @@ export default class Board extends Component {
             _this.setState({
                 slideWidth:getSizes().slideWidth,
                 boardHeight:getSizes().boardHeight,
-                boardTop:getSizes().boardTop
+				boardTop:getSizes().boardTop,
+				mobile:getSizes().mobile
             });
         });
     }
 
     render() {
-
+		var mobile = this.state.mobile;
         return (
-            <div id="board" className="Board" style={{marginTop:this.state.boardTop, left:0,  minWidth:this.state.slideWidth, height: this.state.boardHeight}}>
+            <div id="board" className="Board white_blue" style={{marginTop:this.state.boardTop, left:0,  minWidth:this.state.slideWidth, height: this.state.boardHeight}}>
                 
                 
                 {/* CHAP 0 - Introduction */}
@@ -72,17 +79,17 @@ export default class Board extends Component {
                 </div> 
                 <div className="Board__slide white_blue Board__slide--top">
                     <Edito content={this.props.datas.text[0].zone_2} positionTop="20%"></Edito>
-                    <Element name="FOND12.png" positionLeft="40%" changeMargin={true} ></Element>      
+                    <Element name="FOND12.png" positionLeft="40%"></Element>      
                 </div>
-                <div className="Board__slide white_blue Board__slide--middle">
+                <div className="Board__slide white_blue Board__slide--middle board-small-slide" style={{minWidth: '50vh'}}>
                     <Element name="FOND4.png" index="m2" positionLeft="-80%"></Element>
-                    <Element name="CHAP00-CITATION1.png" index="p1" positionLeft="-2%" changeMargin={true}></Element>        
+                    <Element name="CHAP00-CITATION1.png" index="p1" positionLeft="-2%"></Element>        
                 </div> 
                 <div className="Board__slide white_blue Board__slide--top">
                     <Element name="FOND11bis.png" positionLeft="-80%"></Element>  
                     <Edito content={this.props.datas.text[0].zone_3} positionTop="29%"></Edito>
                 </div>
-                <div className="Board__slide white_blue Board__slide--top js-board-doubleslide " > 
+                <div className="Board__slide white_blue Board__slide--top js-board-doubleslide board-small-slide" style={{minWidth: '65vh'}}> 
                     <Element name="FOND22.png" positionLeft="35%"></Element>
                     <Element name="CHAP00-CITATION2.png"  index="p1" positionLeft="-3%" changeMargin={true} ></Element> 
                 </div>   
@@ -102,14 +109,14 @@ export default class Board extends Component {
                     <Element name="FOND13bottomcuatro.png" positionLeft="-45%" index="m1"></Element>
                     <Element name="FOND13.bottomtwo.png" positionLeft="5%" index="p1"></Element>
                 </div>
-                <div className="Board__slide Board__slide--bottom white_blue">     
-                    <Element name="FOND21-LOUPE1.png" positionLeft="-18%" changeMargin={true}></Element>
+                <div className="Board__slide Board__slide--bottom white_blue board-small-slide" style={{minWidth: '65vh'}}>     
+                    <Element name="FOND21-LOUPE1.png" positionRight="-15vh"></Element>
                 </div>
-                <div className="Board__slide Board__slide--bottom white_blue">
-                     <Element name="AP-CHAP01-CITATIONANAIS.png"  ></Element> 
+                <div className="Board__slide Board__slide--bottom white_blue board-small-slide" style={{minWidth: '56vh'}}>
+                     <Element name="AP-CHAP01-CITATIONANAIS.png" ></Element> 
                      <Element name="CHAP01-CITATION1v2.png" positionLeft="-2%"></Element>
                 </div>
-                <div className="Board__slide Board__slide--top white_blue ">
+                <div className="Board__slide Board__slide--top white_blue board-small-slide" style={{minWidth: '65vh'}}>
                     <Element name="FOND22-LOUPE2.png" positionLeft="-35%" index="p1"></Element>
                     <Element name="FOND10.png" positionLeft="-50%" ></Element>
                 </div> 
@@ -271,14 +278,14 @@ export default class Board extends Component {
                     <Element name="FOND16-ALLIANCESINV.png" positionLeft="-30%" changeMargin={true} ></Element>  
                     <Edito content={this.props.datas.text[4].zone_3} positionTop="17%"></Edito>
                 </div>
-                <div className="Board__slide white_blue">
+                <div className="Board__slide white_blue board-small-slide" style={{minWidth: '65vh'}}>
                     <StaticElement bg="AP-CHAP04-CITATIONGERD.png" name="CHAP04-CITATION2.png" size="simple"></StaticElement>
                 </div>
                 <div className="Board__slide Board__slide--bottom only_blue white">
                     <Element name="FOND12.png" index="m1" positionLeft="-10%"></Element>
                     <Edito content={this.props.datas.text[4].zone_4} positionBottom="15%"></Edito>
                 </div>
-                <div className="Board__slide Board__slide--bottom only_blue white">
+                <div className="Board__slide Board__slide--bottom only_blue white board-small-slide" style={{minWidth: '80vh'}}>
                     <Element name="FOND20-FIN.png" index="p1" positionLeft="-76%" ></Element>
                     <Element name="CHAP04-PHOTO2.png" index="p1" positionLeft="0%"></Element>
                 </div> 

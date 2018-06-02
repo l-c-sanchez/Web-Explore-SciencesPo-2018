@@ -7,7 +7,8 @@ export default class Element extends Component {
         super(props);
         this.state = {
             index: 0,
-            left: 0
+			left: 0,
+			right: 0,
         };
     }
 
@@ -17,46 +18,19 @@ export default class Element extends Component {
         }
         if (this.props.positionLeft) {
             this.setState({left: this.props.positionLeft});
-		}
-
-		if (this.props.changeMargin === true) {
-            var _this = this;
-            var ct = 30;
-            
-			var observer = new MutationObserver(function() {
-                if (ct <= 0) { 
-                    observer.disconnect();
-                }  
-				var element = document.getElementById(_this.props.name);
-				var slide = document.querySelector('.Board__slide');
-
-				element.style.marginLeft = ((slide.offsetWidth / slide.offsetHeight
-                    - element.offsetWidth / element.offsetHeight) * 100) + "%";
-				ct--;
-			});
-
-			observer.observe(document, {childList: true,
-				attributes: true,
-				characterData: true,
-				subtree: true,
-            });
-          
-
-			window.addEventListener('resize', function() {
-				var element = document.getElementById(_this.props.name);
-				var slide = document.querySelector('.Board__slide');
-
-				element.style.marginLeft = ((slide.offsetWidth / slide.offsetHeight
-					- element.offsetWidth / element.offsetHeight) * 100) + "%";
-			});
+		} else if (this.props.positionRight) {
+			this.setState({right: this.props.positionRight});
 		}
     }
 
     render() {
-
+		var style = {marginLeft: this.state.left}
+		if (this.state.right) {
+			style = {marginRight: this.state.right, left: 'auto', right: 0}
+		}
         return (
             <div id={this.props.name} className={"Element Element--z" + this.state.index + " js-element-z" + this.state.index}
-                 style={{marginLeft: this.state.left}}>
+                 style={style}>
                 <img src={process.env.PUBLIC_URL + "/img/px.png"} data-src={require("./img/" + this.props.name)} alt="" className="js-lazy" />
             </div>
         );
