@@ -30,7 +30,9 @@ function getSlideWidthFactor(currentOffset) {
     var factor = 0;
     for (let i = 0; i < doubleslides.length; i++) {
         if (Math.abs(currentOffset) === doubleslides[i].offsetLeft) {
-			factor = parseInt(document.getElementById('board').style.minWidth, 10);
+			// console.log(jQuery(doubleslides[i]).next()[0]);
+			factor = jQuery(doubleslides[i]).next()[0].offsetWidth;
+			// factor = parseInt(document.getElementById('board').style.minWidth, 10);
         }
     }
 

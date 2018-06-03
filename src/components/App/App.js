@@ -16,6 +16,20 @@ import Progressbar from '../Progressbar/Progressbar';
 import DisableLandscape from '../DisableLandscape/DisableLandscape';
 import './App.css';
 
+// var prevWidth = jQuery(document).width();
+
+// window.addEventListener('resize', function () {
+// 	var width = jQuery(document).width();
+// 	var currentOffset = parseInt(document.getElementById('board').style.left, 10);
+// 	var ratio = width / prevWidth;
+
+// 	console.log(ratio);
+// 	console.log(currentOffset * ratio);
+// 	document.getElementById('board').style.left = (currentOffset * ratio) + 'px';
+// 	console.log(document.getElementById('board').style.left)
+// 	prevWidth = width;
+// })
+
 export default class App extends Component {
 
     constructor(props) {
