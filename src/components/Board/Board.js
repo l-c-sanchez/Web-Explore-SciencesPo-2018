@@ -256,7 +256,7 @@ export default class Board extends Component {
                 </div>
                  <div className="Board__slide white_blue js-board-doubleslide">
                     <Video id="k6nQH9clutLjhlqxEZX" maxHeight="800" ratio="0.561"></Video>
-					<Element name="FOND9.png" positionLeft="-50vh" index="p1"></Element>
+					<Element name="FOND9.png" positionLeft="-80vh" index="p1"></Element>
                 </div>
          
                 {/* CHAP04 - Conclusion */}
@@ -297,7 +297,7 @@ export default class Board extends Component {
                 </div> 
                 <div className="Board__slide Board__slide--top only_blue white">
                     <Edito content={this.props.datas.text[4].zone_5} positionTop="15%"></Edito>
-                    <Element name="FOND23-medaille.png" positionLeft="55%" index="p1" changeMargin={true} ></Element>  
+                    <Element name="FOND23-medaille.png" positionRight="50vh" index="p1"></Element>  
                 </div>
                 <div className="Board__slide only_blue">
                     <Skew position="left" bg="OURS.png" ></Skew>
